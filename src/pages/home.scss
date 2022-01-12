@@ -1,0 +1,90 @@
+@import "../shared/helper";
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  .wrapper{
+    flex: 1;
+    padding: px(30) px(50);
+    display: flex;
+    flex-direction: column;
+
+    > header{
+      color:white;
+      margin: 0 auto;
+      text-align: center;
+      width: px(2420);
+      height: px(70);
+      font-size: 24px;
+
+    }
+    .bordered {
+      border: 1px solid #0764bc;
+      border-radius: 4px;
+      position: relative;
+      box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
+      background: transparent;
+      backdrop-filter: blur(2px) brightness(50%);
+
+      &::before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        box-shadow: 17px 0 0 -16px #0e325f,
+        -17px 0 0 -16px #0e325f,
+        0 17px 0 -16px #0e325f,
+        0 -17px 0 -16px #0e325f,
+        9px 0 0 -8px #0d4483,
+        -9px 0 0 -8px #0d4483,
+        0 9px 0 -8px #0d4483,
+        0 -9px 0 -8px #0d4483,;
+        border-radius: 4px;
+      }
+    }
+    > main {
+      width: px(2420);
+      margin: 0 auto;
+      flex: 1;
+      display: grid;
+      padding-top: px(30);
+      grid-template-rows: 400fr 200fr 355fr;
+      grid-template-areas: "box1" "box2" "box3";
+      //grid-template:
+      //"box1 box2 box4 box5" 755fr
+      //"box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
+      grid-column-gap: px(12);
+      grid-row-gap: px(12);
+      border:1px solid red;
+      > section {
+        border: 1px solid red;
+      }
+      > .section1{
+        grid-area: box1;
+
+      }
+      > .section2{
+        grid-area: box2;
+      }
+      > .section3{
+        grid-area: box3;
+      }
+    }
+    > footer {
+      height: px(50);
+      border: 1px solid #0d2d59;
+      margin: px(20) 0 1px;
+      border-radius: 4px;
+      background: transparent;
+      backdrop-filter: blur(2px) brightness(50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color:white;
+    }
+  }
+}
