@@ -53,7 +53,8 @@ export const Chart1 = () => {
         {
           show: false,
           type: 'category',
-          data: ['33亿', '25亿', '33亿', '33亿', '22亿', '18亿', '23亿', money]
+          data: ['第8周', '第7周', '第6周', '第5周', '第5周', '第3周', '第2周', '这周'],
+
 
         }
       ],
@@ -64,12 +65,15 @@ export const Chart1 = () => {
           name: '近8周销售趋势',
           nameTextStyle: {
             fontSize: px(16),
+            color:'#9ca6c7',
           },
+
           min: 0,
           max: 36,
           interval: 12,
           axisLabel: {
-            formatter: '{value} 亿'
+            formatter: '{value} 亿',
+            color:'#9ca6c7',
           },
           axisPointer: {
             show: false
@@ -79,6 +83,7 @@ export const Chart1 = () => {
               color: '#9ca6c7'
             }
           },
+
         },
         {
           type: 'value',
@@ -87,13 +92,15 @@ export const Chart1 = () => {
           max: 400,
           interval: 200,
           axisLabel: {
-            formatter: '{value} %'
+            formatter: '{value} %',
+            color:'#9ca6c7',
           },
           splitLine: {
             lineStyle: {
               color: '#9ca6c7'
             }
           },
+
         }
       ],
       series: [
@@ -124,6 +131,7 @@ export const Chart1 = () => {
           color: '#ecb2ff',
           symbol: 'circle',
           symbolSize: px(16),
+
         }
       ]
     }));

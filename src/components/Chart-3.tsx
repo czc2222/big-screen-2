@@ -56,7 +56,7 @@ export const Chart3 = () => {
         {
           show: false,
           type: 'category',
-          data: ['224709', '72030.5', '292465', '445681', '74717', '15140', '291152.5', passenger]
+          data: ['第8周', '第7周', '第6周', '第5周', '第5周', '第3周', '第2周', '这周']
 
         }
       ],
@@ -67,12 +67,14 @@ export const Chart3 = () => {
           name: '近8周客流趋势',
           nameTextStyle: {
             fontSize: px(16),
+            color:'#9ca6c7',
           },
           min: 0,
           max: 600000,
           interval: 200000,
           axisLabel: {
-            formatter: '{value}'
+            formatter: '{value}',
+            color:'#9ca6c7',
           },
           axisPointer: {
             show: false
@@ -90,7 +92,8 @@ export const Chart3 = () => {
           max: 60,
           interval: 60,
           axisLabel: {
-            formatter: '{value} %'
+            formatter: '{value} %',
+            color:'#9ca6c7',
           },
           splitLine: {
             lineStyle: {
