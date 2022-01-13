@@ -14,7 +14,7 @@ export const Home = () => {
           某零售集团运营大屏
         </header>
         <main>
-          <section className="bordered section1">
+          <section className=" section1">
             <Chart1/>
             <Chart2/>
             <Chart3/>
