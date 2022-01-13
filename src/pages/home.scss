@@ -67,7 +67,7 @@
       > .section1{
         grid-area: box1;
         display: flex;
-
+        justify-content: space-between;
 
       }
       > .section2{
@@ -91,9 +91,9 @@
       color:white;
     }
   }
-  .销量{
+  .销量,.人流量{
     color:$font-color;
-    width: px(600);
+    width: px(800);
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -117,18 +117,38 @@
       .销售额::before{
         background: #8d70f0;
       }
+      .客流数::before{
+        background: #fdeadb;
+      }
       .周环比::before{
         background: #ecb2ff;
+      }
+      .周环比2::before{
+        background: #f3c0b0;
       }
     }
   }
   .sales{
+    .number{
+      font-size: px(40);
+      text-align: center;
+      color:#8d70f0;
+    }
+  }
+  .人流{
+    .number{
+      font-size: px(40);
+      text-align: center;
+      color:#fdeadb;
+    }
+  }
+  .sales,.人流{
     display: flex;
     height: px(150);
     justify-content: space-between;
 
     .ratioWrapper{
-      width:px(295);
+      width:px(395);
       display: flex;
       justify-content: space-between;
       flex-direction: column;
@@ -136,10 +156,7 @@
       .today{
         font-size: px(26);
       }
-      .number{
-        font-size: px(40);
-        text-align: center;
-      }
+
       .ratio{
         display: flex;
         align-items: center;
@@ -154,12 +171,12 @@
 
   }
   .map{
-    width:px(620);
+    width:px(800);
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: px(10);
+
   }
   .chart {
     flex:1;

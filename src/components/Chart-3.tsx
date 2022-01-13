@@ -5,19 +5,22 @@ import {px} from '../shared/px';
 import {Ratio} from '../components/Ratio';
 import {setChange} from '../shared/setChange';
 
-export const Chart1 = () => {
+export const Chart3 = () => {
   const divRef = useRef(null);
   const myEcharts = useRef(null)
-  const [money, setMoney] = useState(7);
-  const [sales,setSales] =useState(6269)
-  const [profit,setProfit]=useState(470)
+  const [passenger, setPassenger] = useState(303602);
+  const [person,setPerson] =useState(119858)
+  const [vip,setVip]=useState(104)
   const [weekSalesRatio,setSalesWeekRatio] =useState(6268789250.00)
   const [weekProfitRatio,setWeekProfitRatio] =useState(94044463)
 
 
-  setChange(money,setMoney,2500000)
-  setChange(sales,setSales,500)
-  setChange(profit,setProfit,1000)
+
+  setTimeout(()=>{
+    setPassenger(passenger +35)
+  },3000)
+  setChange(person,setPerson,500)
+  setChange(vip,setVip,6000)
   setChange(weekSalesRatio,setSalesWeekRatio,3000)
   setChange(weekProfitRatio,setWeekProfitRatio,6000)
 
@@ -53,7 +56,7 @@ export const Chart1 = () => {
         {
           show: false,
           type: 'category',
-          data: ['33亿', '25亿', '33亿', '33亿', '22亿', '18亿', '23亿', money]
+          data: ['224709', '72030.5', '292465', '445681', '74717', '15140', '291152.5', passenger]
 
         }
       ],
@@ -61,15 +64,15 @@ export const Chart1 = () => {
 
         {
           type: 'value',
-          name: '近8周销售趋势',
+          name: '近8周客流趋势',
           nameTextStyle: {
             fontSize: px(16),
           },
           min: 0,
-          max: 36,
-          interval: 12,
+          max: 600000,
+          interval: 200000,
           axisLabel: {
-            formatter: '{value} 亿'
+            formatter: '{value}'
           },
           axisPointer: {
             show: false
@@ -83,9 +86,9 @@ export const Chart1 = () => {
         {
           type: 'value',
 
-          min: -200,
-          max: 400,
-          interval: 200,
+          min: -120,
+          max: 60,
+          interval: 60,
           axisLabel: {
             formatter: '{value} %'
           },
@@ -98,9 +101,9 @@ export const Chart1 = () => {
       ],
       series: [
         {
-          name: '销售额',
+          name: '客流数',
           type: 'bar',
-          data: [33, 25, 33, 33, 22, 18, 23, money],
+          data: [224709, 72030.5, 292465, 445681, 74717, 15140, 303602.5, passenger],
           itemStyle: {
             normal: {
               label: {
@@ -113,33 +116,33 @@ export const Chart1 = () => {
               }
             }
           },
-          color: '#8d70f0'
+          color: '#fdeadb'
         },
 
         {
           name: '周环比',
           type: 'line',
           yAxisIndex: 1,
-          data: [0, 30, 35, 0, 210, -50, 10,],
-          color: '#ecb2ff',
+          data: [-25, -5, 3, -20, -70, -80, -3,-30],
+          color: '#f3c0b0',
           symbol: 'circle',
           symbolSize: px(16),
         }
       ]
     }));
-  }, [money]);
+  }, [passenger]);
   return (
-    <div className="销量">
-      <div className="sales">
-        <Ratio todaySales="今日销售额" todayMoney={sales +'万'} RatioText="周同比" Ratio={weekSalesRatio}/>
+    <div className="人流量">
+      <div className="人流">
+        <Ratio todaySales="今日客流量" todayMoney={person} RatioText="年同比" Ratio="6.25"/>
 
-        <Ratio todaySales="今日毛利额" todayMoney={profit +'万'} RatioText="周同比" Ratio={weekProfitRatio}/>
+        <Ratio todaySales="今日新增会员" todayMoney={vip} RatioText="年同比" Ratio="3.25"/>
       </div>
       <div className=" chart bordered">
         <div ref={divRef} className="charts"/>
         <div className="round">
-          <span className="销售额">销售额</span>
-          <span className="周环比">周环比</span>
+          <span className="客流数">客流数</span>
+          <span className="周环比2">周环比</span>
         </div>
       </div>
 
