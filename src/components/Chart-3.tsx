@@ -7,7 +7,7 @@ import {setChange} from '../shared/setChange';
 
 export const Chart3 = () => {
   const divRef = useRef(null);
-  const myEcharts = useRef(null)
+  const myChart = useRef(null)
   const [passenger, setPassenger] = useState(303602);
   const [person,setPerson] =useState(119858)
   const [vip,setVip]=useState(104)
@@ -17,7 +17,7 @@ export const Chart3 = () => {
 
 
   setTimeout(()=>{
-    setPassenger(passenger +35)
+    setPassenger(passenger + 35)
   },3000)
   setChange(person,setPerson,500)
   setChange(vip,setVip,6000)
@@ -25,11 +25,16 @@ export const Chart3 = () => {
   setChange(weekProfitRatio,setWeekProfitRatio,6000)
 
 
+  const data = [
+    [224709, 72030.5, 292465, 445681, 74717, 15140, 303602.5, 303602]
+  ];
+  setTimeout(()=>{
+    const newData = [224709, 72030.5, 292465, 445681, 74717, 15140, 303602.5, passenger]
+    x(newData);
+  },0)
 
-
-  useEffect(() => {
-    myEcharts.current = echarts.init(divRef.current);
-    myEcharts.current.setOption(createEchartsOptions({
+  const x = (data) => {
+    myChart.current.setOption(createEchartsOptions({
       grid: {
         left: px(100),
         right: px(100),
@@ -106,7 +111,7 @@ export const Chart3 = () => {
         {
           name: '客流数',
           type: 'bar',
-          data: [224709, 72030.5, 292465, 445681, 74717, 15140, 303602.5, passenger],
+          data: data,
           itemStyle: {
             normal: {
               label: {
@@ -133,7 +138,12 @@ export const Chart3 = () => {
         }
       ]
     }));
-  }, [passenger]);
+  };
+  useEffect(() => {
+    myChart.current = echarts.init(divRef.current);
+    x(data);
+  }, []);
+
   return (
     <div className="人流量">
       <div className="人流">
