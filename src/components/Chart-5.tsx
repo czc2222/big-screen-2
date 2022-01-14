@@ -27,7 +27,7 @@ export const Chart5 =()=>{
           radius: ['22%', '40%'],
           avoidLabelOverlap: false,
           label: {
-            show: true, position: 'outside', textStyle: {color: '#9ca6c7', fontSize: px(15)},
+            show: true, position: 'outside', color: '#9ca6c7', fontSize: px(15),
             formatter(options) {
 
               return options.name+':'+(2.17/100*options.value).toFixed(2)+'亿:'  + options.value+'%';

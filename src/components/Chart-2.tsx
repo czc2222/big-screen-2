@@ -49,7 +49,7 @@ export const Chart2 = () => {
       series: [
         {
           type: 'map',
-          mapType: 'CN', // 自定义扩展图表类型
+          map: 'CN', // 自定义扩展图表类型
           data: [
             {name: '四川省',value:1200},
             {name: '甘肃省',value:1200},
@@ -76,15 +76,15 @@ export const Chart2 = () => {
             {name: '福建省',value:1200},
             {name: '海南省',value:900},
           ],
-
+          emphasis: {
+            label: {color: '#617182'},
+            areaColor: '#e7b3fd',
+          },
           itemStyle: {
             areaColor: '#b7a8ed',
             color: 'none',
             borderColor: 'white',
-            emphasis: {
-              label: {color: '#617182'},
-              areaColor: '#e7b3fd',
-            },
+
           }
         }
       ]
