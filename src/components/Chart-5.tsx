@@ -50,7 +50,7 @@ export const Chart5 =()=>{
   return(
     <div className="saleRatio">
 
-      <div ref={divRef} className="echart"></div>
+      <div ref={divRef} className="echart bordered"></div>
     </div>
   )
 }

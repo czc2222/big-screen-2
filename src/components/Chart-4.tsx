@@ -117,7 +117,7 @@ export const Chart4 =()=>{
   },[])
   return(
     <div className="increase">
-      <div ref={divRef} className="echart"></div>
+      <div ref={divRef} className="echart bordered"></div>
     </div>
   )
 }
