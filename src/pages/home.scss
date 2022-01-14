@@ -72,9 +72,13 @@
       }
       > .section2{
         grid-area: box2;
+        display: flex;
+        justify-content: space-between;
       }
       > .section3{
         grid-area: box3;
+        display: flex;
+        justify-content: space-between;
       }
 
     }
@@ -178,7 +182,7 @@
     justify-content: space-between;
 
   }
-  .increase{
+  .increase,.saleRatio{
     width: px(460);
     height: 100%;
 

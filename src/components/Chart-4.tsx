@@ -71,7 +71,7 @@ export const Chart4 =()=>{
             normal: {
               //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
               color: function (params) {
-                const colorList = ['#e9b2ff', '#ba90fc', '#8f6ef0'];
+                const colorList = ['#8f6ef0', '#ba90fc', '#e9b2ff'];
                 return colorList[params.dataIndex];
               }
             }
@@ -112,81 +112,8 @@ export const Chart4 =()=>{
       run();
     }, 3000);
 
-    option && myChart.setOption(option);
-    // myChart.setOption(createEchartsOptions(({
-      // title: {
-      //   text: '各门店类型增长情况',
-      //   textStyle:{
-      //     fontSize:px(20),
-      //     color:'#9ca6c7'
-      //   }
-      // },
-      // grid: {
-      //   left: px(70),
-      //   right: px(70),
-      //   bottom: px(50),
-      //   top: px(50),
-      // },
-      // tooltip: {
-      //   trigger: 'axis',
-      //   axisPointer: {
-      //     type: 'shadow'
-      //   }
-      // },
-      //
-      // xAxis: {
-      //
-      //   type: 'value',
-      //   min: -80,
-      //   max: 60,
-      //   interval: 20,
-      //   axisLabel: {
-      //     formatter: '{value}.00%',
-      //     rotate:30
-      //   },
-      //   splitLine: {
-      //     lineStyle: {
-      //       color: '#9ca6c7'
-      //     }
-      //   },
-      // },
-      // yAxis: {
-      //   axisLine:{
-      //     onZeroAxisIndex:-80,
-      //     lineStyle:{
-      //       color:'none'
-      //     }
-      //   },
-      //   type: 'category',
-      //   axisTick: { show: false },
-      //   splitLine: { show: false },
-      //   data: [
-      //     '成熟型',
-      //     '培育型',
-      //     '成长型',
-      //   ],
-      // },
-      // series: [
-      //   {
-      //     name: '类型',
-      //     type: 'bar',
-      //     data: [
-      //       { value: -60,label: labelRight },
-      //       { value: -13, label: labelRight },
-      //       { value: 40, label: labelRight },
-      //     ],
-      //     itemStyle:{
-      //       normal:{
-      //         //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
-      //         color: function (params){
-      //           const colorList = ['#e9b2ff','#ba90fc','#8f6ef0'];
-      //           return colorList[params.dataIndex];
-      //         }
-      //       },
-      //     }
-      //   }
-      // ]
-    // })))
+    option && myChart.setOption(createEchartsOptions(option));
+
   },[])
   return(
     <div className="increase">
