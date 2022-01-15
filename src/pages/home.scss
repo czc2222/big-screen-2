@@ -6,7 +6,7 @@
   background-size: cover;
   .wrapper{
     flex: 1;
-    padding: px(30) px(50);
+    padding: px(10) px(50);
     display: flex;
     flex-direction: column;
 
@@ -16,7 +16,7 @@
       text-align: center;
       width: px(2420);
       height: px(70);
-      font-size: 24px;
+      font-size: px(50);
 
     }
     .bordered {
@@ -51,19 +51,12 @@
       margin: 0 auto;
       flex: 1;
       display: grid;
-      padding-top: px(10);
+      padding-top: px(5);
       grid-template-rows: 400fr 200fr 355fr;
       grid-template-areas: "box1" "box2" "box3";
-      //grid-template:
-      //"box1 box2 box4 box5" 755fr
-      //"box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
-      grid-column-gap: px(12);
-      grid-row-gap: px(12);
 
-      > section {
-
-
-      }
+      grid-column-gap: px(5);
+      grid-row-gap: px(5);
       > .section1{
         grid-area: box1;
         display: flex;
@@ -83,9 +76,8 @@
 
     }
     > footer {
-      height: px(50);
-      border: 1px solid #0d2d59;
-      margin: px(20) 0 1px;
+      height: px(40);
+      margin: px(5) 0 1px;
       border-radius: 4px;
       background: transparent;
       backdrop-filter: blur(2px) brightness(50%);
@@ -187,8 +179,8 @@
     height: 100%;
 
   }
-.ranking,.suppliers{
-  width:px(750);
+.ranking,.suppliers,.brand{
+  width:px(800);
   height: 100%;
 }
   .suppliers{
@@ -199,14 +191,15 @@
     .wrapper{
       display: flex;
       align-items: center;
+      justify-content: space-between;
     }
     .title{
       font-size: px(25);
       text-align: start;
     }
     .gold,.id{
-      width: px(33);
-      height: px(33);
+      width: px(35);
+      height: px(35);
       background-size: px(30) ;
       background-repeat: no-repeat;
       display: flex;
