@@ -64,7 +64,7 @@ export const Chart1 = () => {
           type: 'value',
           name: '近8周销售趋势',
           nameTextStyle: {
-            fontSize: px(16),
+            fontSize: px(20),
             color:'#9ca6c7',
           },
 

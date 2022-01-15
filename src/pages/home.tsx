@@ -8,6 +8,8 @@ import {Chart4} from '../components/Chart-4';
 import {Chart5} from '../components/Chart-5';
 import {Chart6} from '../components/Chart-6';
 import {Chart7} from '../components/Chart-7';
+import {Chart8} from '../components/Chart-8';
+import {Chart9} from '../components/Chart-9';
 
 export const Home = () => {
   const year = new Date().getFullYear();
@@ -23,13 +25,16 @@ export const Home = () => {
             <Chart2/>
             <Chart3/>
           </section>
-          <section className=" bordered section2">
+          <section className="  section2">
             <Chart4/>
             <Chart5/>
             <Chart6/>
             <Chart7/>
           </section>
-          <section className="bordered section3"></section>
+          <section className="bordered section3">
+            <Chart8/>
+            <Chart9/>
+          </section>
         </main>
         <footer>
           &copy; czc2222 2020-{year}

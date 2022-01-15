@@ -71,7 +71,7 @@ export const Chart3 = () => {
           type: 'value',
           name: '近8周客流趋势',
           nameTextStyle: {
-            fontSize: px(16),
+            fontSize: px(20),
             color:'#9ca6c7',
           },
           min: 0,
