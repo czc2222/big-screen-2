@@ -83,7 +83,7 @@ export const Chart6 =()=>{
   },[])
   return (
     <div className="area">
-        <div ref={divRef} className="chart bordered"></div>
+        <div ref={divRef} className="echart bordered"></div>
     </div>
   )
 }
